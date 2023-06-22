@@ -6,6 +6,14 @@ export default () => {
     return historyState
 }
 
+/**
+ * Updates the history state for a given post, recording its mutation from an old index to a new index.
+ * 
+ * @param {number} postId - The ID of the post being updated.
+ * @param {number} oldIndex - The original index position of the post.
+ * @param {number} newIndex - The new index position of the post.
+ * @returns {void}
+ */
 export const updatePostHistory = (postId: number, oldIndex: number, newIndex: number): void => {
     const historyState = useState('postsHistory') as Ref<PostStateMutation[]>;
     const postStateMutation: PostStateMutation = {
