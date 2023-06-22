@@ -15,7 +15,7 @@ export default async () => {
  *
  * @param {number} currentIndex - The current index of the post to be moved.
  * @param {number} newIndex - The new index where the post should be moved to.
- * @returns {void}
+ * @returns {Post} - The post that was moved.
  */
 export const updatePosition = (currentIndex: number, newIndex: number): Post => {
     const postsState: Ref<Post[]> = useState('posts');
